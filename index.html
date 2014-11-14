@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+	<title>App Raffel Pages Con JS</title>
+	<style>
+		html {
+			height:100%;
+		}
+		body {
+			background-color: #FFFFFF;
+			margin:0;
+			height:100%;
+		}
+	</style>
+
+	<!-- copy these lines to your document head: -->
+
+	<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=320" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" >
+	<script type="text/javascript" src="App%20Raffel%20Pages%20Con%20JS.hyperesources/index.js"></script>
+	<script type="text/javascript" src="App%20Raffel%20Pages%20Con%20JS.hyperesources/parse-1.2.18.min.js"></script>
+	<script type="text/javascript" src="App%20Raffel%20Pages%20Con%20JS.hyperesources/jquery.mobile-1.4.2.min.js"></script>
+	<script type="text/javascript" src="App%20Raffel%20Pages%20Con%20JS.hyperesources/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="App%20Raffel%20Pages%20Con%20JS.hyperesources/barcodescanner.js"></script>
+	<script type="text/javascript" src="App%20Raffel%20Pages%20Con%20JS.hyperesources/phonegap-toast.js"></script>
+
+	
+	<script>   	var uuidDispositivo;    	var cuponesCanjeados;	var idObjetoParse;var objectoParse;              // Espera a que PhoneGap se inicie        //        document.addEventListener("deviceready", onDeviceReady, false);        function onDeviceReady() {                            var element = document.getElementById('deviceProperties');            uuidDispositivo = device.uuid;            alert('UUID: ' + uuidDispositivo);            Parse.initialize("EAGGSjnVvpOlfbcisuItP7GpQsmG1V7mzlDhYWmg", "5ofQbHszcIOqelkQ5LFkdEUsxWcckRuTSoXwq6jL");            var contadorCupones = Parse.Object.extend("contadorCupones");	        var query = new Parse.Query(contadorCupones);	   	query.equalTo("user", uuidDispositivo);    	    query.find({    	          success: function(results) {    	            // Do something with the returned Parse.Object values    	            for (var i = 0; i < results.length; i++) {     	                                    	objectoParse = results[i];    	              //alert(objectoParse.id + ' - ' + objectoParse.get('count'));idObjetoParse = object.id;    	              cuponesCanjeados = objectoParse.get('count');    	              alert('Usted ha canjeado ' + cuponesCanjeados + ' cupones ');    	            }    	          },    	          error: function(error) {    	            alert("Error: " + error.code + " " + error.message);    	          }    	        });            });        }		<script>   		var uuidDispositivo;    	var cuponesCanjeados=0;		var idObjetoParse;		var objectoParse;              // Espera a que PhoneGap se inicie        //        document.addEventListener("deviceready", onDeviceReady, false);        function onDeviceReady() {                            var element = document.getElementById('deviceProperties');            uuidDispositivo = device.uuid;            //alert('UUID: ' + uuidDispositivo);            Parse.initialize("EAGGSjnVvpOlfbcisuItP7GpQsmG1V7mzlDhYWmg", "5ofQbHszcIOqelkQ5LFkdEUsxWcckRuTSoXwq6jL");            var contadorCupones = Parse.Object.extend("contadorCupones");	        var query = new Parse.Query(contadorCupones);	   		query.equalTo("user", uuidDispositivo);    	    query.find({    	          success: function(results) {    	            // Do something with the returned Parse.Object values    	            for (var i = 0; i < results.length; i++) {     	               	objectoParse = results[i];    	              	//alert(objectoParse.id + ' - ' + objectoParse.get('count'));						idObjetoParse = object.id;    	              	cuponesCanjeados = objectoParse.get('count');    	              	//alert('Usted ha canjeado ' + cuponesCanjeados + ' cupones ');    	            }    	          },    	          error: function(error) {    	            //alert("Error: " + error.code + " " + error.message);    	          }    	        });            });        }			function anayadirCuponCliente (){			objectoParse.increment("count");			objectoParse.save();		}	</script>
+	
+	<!-- end copy -->
+
+  </head>
+  <body>
+	<div style ="margin:auto;width:320px;height:460px">
+
+
+	
+	<!-- copy these lines to your document: -->
+
+	<div id="appraffelpagesconjs_hype_container" style="position:relative;overflow:hidden;width:320px;height:460px;">
+		<script type="text/javascript" charset="utf-8" src="App%20Raffel%20Pages%20Con%20JS.hyperesources/appraffelpagesconjs_hype_generated_script.js?11925"></script>
+	</div>
+
+	<!-- end copy -->
+
+
+	</div>
+	
+
+
+	<!-- text content for search engines: -->
+
+	<div style="display:none">
+
+		<div>Reserva</div>
+		<div>          Contacto</div>
+		<div>Precios</div>
+		<div>Tarjeta VIP</div>
+		<div>          Blog</div>
+		<div>
+</div>
+		<div>Promos</div>
+		<div>          Raffel Pages</div>
+		<div>Tendencias</div>
+		<div>Raffel Pages
+</div>
+		<div></div>
+		<div>          Salir</div>
+		<div>19,95€</div>
+		<div>Tinte</div>
+		<div>11,95€</div>
+		<div>Mujer</div>
+		<div>Mechas + Corte + Lavado</div>
+		<div>29,95€</div>
+		<div>Corte + Lavado</div>
+		<div>Cortar</div>
+		<div>Corte + Tinte + Lavado</div>
+		<div>Mechas Californianas</div>
+		<div>Hombre</div>
+		<div>Precios
+</div>
+		<div>Cubrir Canas</div>
+		<div>39,95€</div>
+		<div>Amazon</div>
+		<div>Insomnium</div>
+		<div>Passage</div>
+		<div>Tendencias
+</div>
+		<div>Passage
+</div>
+		<div>Insomniu</div>
+		<div>Amazon
+</div>
+		<div>Insomnium
+</div>
+		<div>Contacto
+</div>
+		<div>650606555</div>
+		<div>Blog
+</div>
+		<div>  
+  
+======================== header ============================CastellanoEnglish Català
+Intranet  Recordar usuario Enviar
+¿Ha olvidado su contraseña?
+======================== logo ============================  ======================== menu ============================Menu
+InicioRaffel  PagesRP & TTFormaciónEquipoBeauty CornerColeccionesColecciones anterioresPassageRe-ActIn-SomniumAmazonIdolsPrensaSalonesBuscador de salonesFranquiciasMuseoRevistaBlog
+=================== slider ========================================== content ===========================Raffel Pages
+“Mis cuatro claves son: invertir, investigar, intuir, innovar”. Raffel Pages.
+
+Fue su padre, peluquero desde 1925, quien introdujo a Raffel Pages en el mundo de la peluquería. Reticente al principio, pronto demostró una habilidad especial.
+Permaneció en el negocio familiar hasta que, de repente, todo dio un vuelco: Rosy Carita, de Carita de París, se fijó en él. La mejor peluquería mundial en los años sesenta, le propuso un stage al joven Raffel Pages. Con 18 años, compartía tijeras con los mejores peluqueros y estilistas del mundo en París.
+
+Ese incomparable marco de glamour y sofisticación acabó de desatar su creatividad y le ayudó a entender lo importante que resulta un equilibrio entre imagen, cuerpo y peinado.
+
+En 1976 vuelve a Barcelona y abre su primer salón. Sin prisa pero sin pausa, la empresa va creciendo y abriendo salones. En 1992, inaugura su primer centro de formación exclusivo, el Instituto de Perfeccionamiento Raffel Pages, para formar a los futuros estilistas y peluqueros de la firma y que actualmente está abierto a cualquier profesional del sector. Su experiencia y talento, al servicio de las nuevas generaciones.
+
+Hoy, Raffel Pages cuenta con 83 salones y con presencia en el extranjero, con dos salones más en París.
+
+Blog[ 07.07.2014 ] AMAZON portada de la revista LINDA de Praga
++[ 04.07.2014 ] El 080
++[ 30.06.2014 ] Hoy arranca la 080 Barcelona Fashion, con Raffel Pages como peluquería oficial
+Página oficial de 080 Barcelona Fashion +
+[ 26.06.2014 ] IDOLS en el blog de TIENDA ESTÉTICA MAGAZINE
+Clicka aquí para ver el Blog de Tienda Estética Magazine +
+Buscador de salones  
+EquipoRaffel PagesFundador, Director y Community Manager
+Carolina PagesDirectora
+Quionia PagesDirectora
+======================== aside ============================Raffel Pages
+Raffel Pages & TT
+Formación
+EquipoColecciones
+Amazon
+Idols
+
+
+Franquicias
+Información franquicias
+Buscador de salones
+Intranet franquiciadosOtros
+Museo Raffel Pages
+Revista
+Blog / NoticiasFollow Us
+======================== footer ============================© 2014 Raffel Pages   |   Contactar
+by WM & DF</div>
+		<div>OK</div>
+		<div>Conectado</div>
+		<div>Wi-Fi
+</div>
+		<div>Ya estás conectado a nuestra red</div>
+		<div>Nombre</div>
+		<div>Peluquera      Carlos
+   Dina   Tere</div>
+		<div></div>
+		<div>Servicio
+ Cortar
+Cortar y Peinar
+Otros</div>
+		<div>Reserva
+</div>
+		<div>  Fecha: 
+
+</div>
+		<div>Otros</div>
+		<div>Tere</div>
+		<div>Peluquer@</div>
+		<div>Carlos</div>
+		<div>Servicio</div>
+		<div>Cortar y Peinar</div>
+		<div>Dina</div>
+		<div>En Breve recibirás la confirmación</div>
+		<div>Perfecto!</div>
+		<div>Por cada 6 servicios en Raffel Pages,uno GRATUÏTO
+</div>
+		<div>Términos y Condiciones</div>
+		<div>Tarjeta Vip
+</div>
+		<div>Añadir Servicio</div>
+		<div>Ofertas
+</div>
+		<div>Masaje Capilar</div>
+		<div>Corte Gratis</div>
+		<div>2 x 1</div>
+		<div>Terminos y Condiciones
+</div>
+		<div>Terminos y Condiciones | </div>
+
+	</div>
+
+	<!-- end text content: -->
+
+  </body>
+</html>
